@@ -5,9 +5,6 @@ const merchant_model = require('./merchant_model');
 
 const path = require('path'); // Usually moved to the start of file
 
-app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../build/index.html'));
-});
 
 app.use( express.static( `${__dirname}/../build` ) );
 app.use(express.json())
